@@ -1,0 +1,6 @@
+Flask
+Flask-RESTful
+uwsgi
+uuid
+asyncio
+aiohttp
