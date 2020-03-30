@@ -1,3 +1,1 @@
 # CheckerSimulator
-# CheckerSimulator
-# CheckerSimulator
