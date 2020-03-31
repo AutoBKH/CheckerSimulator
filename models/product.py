@@ -36,7 +36,7 @@ class ProductModel():
         return data['name']
 
     def json(self):
-        return {'instanceid': self.instance_id,'responce':  self.response,'name': self.name, 'guid': self.guid}
+        return {'instanceid': self.instance_id,'response':  self.response,'name': self.name, 'guid': self.guid}
 
     async def delay_time(self):
         '''
@@ -47,7 +47,7 @@ class ProductModel():
         url = PRODUCT_DB_URI
         self.response = self.get_delay_response()
         async with ClientSession() as client:
-            async with client.get( url, data=self.json()) as response:
+            async with client.post( url, data=self.json()) as response:
                 print(await response.json())
 
     def get_response(self):
